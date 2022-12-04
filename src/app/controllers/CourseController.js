@@ -29,7 +29,7 @@ class CourseController{
         });
     }
      //[GET] /courses/:id/edit
-    edit(req, res){
+    edit(req, res, next){
         Course.findById(req.params.id)
         .then(course => {
             res.render('courses/edit',
